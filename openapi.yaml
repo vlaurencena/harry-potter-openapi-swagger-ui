@@ -1,7 +1,9 @@
 openapi: 3.0.0
 info:
   title: Harry Potter API
-  description: A REST Harry Potter API with images and information about books, characters and spells. Translated to many languages.
+  description: >-
+    A REST Harry Potter API with images and information about books, characters
+    and spells. Translated to many languages.
   version: 1.0.0
 tags:
   - name: Books
@@ -23,6 +25,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Book'
+        '404':
+          $ref: '#/components/responses/404'
       parameters:
         - $ref: '#/components/parameters/indexParam'
         - $ref: '#/components/parameters/maxParam'
@@ -54,6 +58,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Character'
+        '404':
+          $ref: '#/components/responses/404'
       parameters:
         - $ref: '#/components/parameters/indexParam'
         - $ref: '#/components/parameters/maxParam'
@@ -85,6 +91,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/House'
+        '404':
+          $ref: '#/components/responses/404'
       parameters:
         - $ref: '#/components/parameters/indexParam'
         - $ref: '#/components/parameters/maxParam'
@@ -116,6 +124,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Spell'
+        '404':
+          $ref: '#/components/responses/404'
       parameters:
         - $ref: '#/components/parameters/indexParam'
         - $ref: '#/components/parameters/maxParam'
@@ -134,6 +144,17 @@ paths:
               schema:
                 $ref: '#/components/schemas/Spell'
 components:
+  responses:
+    '404':
+      description: Not Found.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: Invalid Index
   schemas:
     Book:
       type: object
