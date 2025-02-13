@@ -1,10 +1,13 @@
 openapi: 3.0.0
 info:
   title: Harry Potter API
-  description: >-
+  description: |
     A REST Harry Potter API with images and information about books, characters
     and spells. Translated to many languages.
+    
+    This documentation was built by Víctor Laurencena and it's available on [GitHub](https://github.com/vlaurencena/harry-potter-openapi-swagger-ui).
   version: 1.0.0
+      
 tags:
   - name: Books
   - name: Characters
