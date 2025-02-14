@@ -1,8 +1,8 @@
 # Harry Potter API (OpenAPI & Swagger UI)
 
-This repository contains the OpenAPI specification (version 3.0) and Swagger UI documentation for a RESTful Harry Potter API.  This API provides access to information about books, characters, houses, and spells from the Harry Potter universe.
+This repository contains the OpenAPI specification (version 3.0) and Swagger UI documentation for [this RESTful Harry Potter API](https://github.com/fedeperin/potterapi). The API provides access to information about books, characters, houses, and spells from the Harry Potter universe.
 
-**Visit the live version [here](https://vlaurencena.github.io/harry-potter-openapi-swagger-ui/).**
+**Visit the live version of this documentation [here](https://vlaurencena.github.io/harry-potter-openapi-swagger-ui/).**
 
 ## API Description
 
